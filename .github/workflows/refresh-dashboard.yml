@@ -1,0 +1,42 @@
+name: Refresh SLA Dashboard
+
+on:
+  schedule:
+    # Run every hour at minute 0
+    - cron: '0 * * * *'
+  workflow_dispatch: # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run dashboard generator
+        env:
+          GRAFANA_SERVICE_ACCOUNT_TOKEN: ${{ secrets.GRAFANA_SERVICE_ACCOUNT_TOKEN }}
+          GRAFANA_WORKSPACE_URL: ${{ secrets.GRAFANA_WORKSPACE_URL }}
+        run: python availability_dashboard.py
+
+      - name: Copy dashboard to index.html
+        run: cp dashboard.html index.html
+
+      - name: Commit and push updated dashboard
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html dashboard.html
+          # Only commit if there are changes
+          git diff --staged --quiet || (git commit -m "Auto-refresh SLA dashboard [$(date -u '+%Y-%m-%d %H:%M UTC')]" && git push)
