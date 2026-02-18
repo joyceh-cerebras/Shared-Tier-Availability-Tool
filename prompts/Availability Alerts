@@ -1,0 +1,15 @@
+Create a dashboard that identifies models with low availability & high queue times and suggests possible diagnosis/root causes that are causing the symptoms seen.
+
+Do this by taking the GRAFANA_SERVICE_ACCOUNT_TOKEN specified in the .env file to access Cerebras data. 
+
+The dashboard should go through and grab the availability for each model using the query powering this panel https://g-c85e06a4c1.grafana-workspace.us-west-2.amazonaws.com/d/feczl6mw59zb4e/slo?orgId=1&var-model=alphasense-gpt-oss-120b&var-datasource=edvph6t110hz4a&viewPanel=1
+Also grab the P99 queue times for each priority for each model here: https://g-c85e06a4c1.grafana-workspace.us-west-2.amazonaws.com/d/aexvdalh65wxsd/request-prioritization?orgId=1&var-model=qwen-3-235b-a22b-instruct-2507&var-bins=0.0,%200.0001,%200.0002,%200.0005,%200.001,%200.002,%200.005,%200.01,%200.02,%200.05,%200.1,%200.2,%200.5,%201.0,%202.0,%205.0,%20float%28v:%22%2BInf%22%29&viewPanel=59.
+
+Only flag and create a possible diagnosis panel for each model that is below SLA in availability or P99 queue time SLA is violated. The SLA requirements are as follows:
+- Availability on the model needs to be at least 99.9%
+- P99 queue time for Priority tier 1 has to be less than 500 ms
+- P99 queue time for Priority tier 2 has to be less than 1.5 s
+- P99 queue time for Priority tier 3 has to be less than 2 s
+- P99 queue time for Priority tier 4 has to be less than 5 s
+
+The dashboard should show a panel for each model with SLA requirements violated, highlighting which requirements are violated and by how much. (Actual vs expected data)
