@@ -16,3 +16,7 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 /vendor/
+
+# Secrets
+.env
+dashboard_data.json
