@@ -185,7 +185,7 @@
 
 <h1>🚨 Availability &amp; Queue Time SLA Dashboard</h1>
 <p class="subtitle">
-  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-21 06:39 UTC
+  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-21 07:31 UTC
   &nbsp;|&nbsp; Models scanned: 27
 </p>
 
@@ -258,9 +258,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 3)</td>
-          <td class="actual">3.0447 s</td>
+          <td class="actual">3.0446 s</td>
           <td class="expected">< 2.0 s</td>
-          <td class="delta">+1.0447 s</td>
+          <td class="delta">+1.0446 s</td>
         </tr>
         
       </tbody>
@@ -328,9 +328,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">79.83 s</td>
+          <td class="actual">80.52 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+78.3259 s</td>
+          <td class="delta">+79.0191 s</td>
         </tr>
         
       </tbody>
@@ -342,7 +342,7 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=8853, avg=954.0). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=8853, avg=989.3). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
     <div class="diag-card critical">
@@ -352,7 +352,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time is 53.2× the SLA limit (79.826s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
+      <div class="diag-desc">P99 queue time is 53.7× the SLA limit (80.519s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
     </div>
     
     
@@ -386,9 +386,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">99.4444%</td>
+          <td class="actual">99.3056%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-0.4556%</td>
+          <td class="delta">-0.5944%</td>
         </tr>
         
         <tr>
@@ -405,14 +405,14 @@
     
     <div class="diag-section-title">Possible Diagnosis / Root Causes</div>
     
-    <div class="diag-card medium">
+    <div class="diag-card high">
       <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=36, avg=4.1). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=36, avg=3.8). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
     <div class="diag-card medium">
       <div class="diag-title">Availability – Below SLA</div>
-      <div class="diag-desc">Availability is 0.456% below SLA (99.444% vs 99.9%). Check for intermittent 5xx errors or short-lived node issues.</div>
+      <div class="diag-desc">Availability is 0.594% below SLA (99.306% vs 99.9%). Check for intermittent 5xx errors or short-lived node issues.</div>
     </div>
     
     <div class="diag-card critical">
@@ -451,9 +451,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">10.58 s</td>
+          <td class="actual">10.57 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+9.0776 s</td>
+          <td class="delta">+9.0702 s</td>
         </tr>
         
       </tbody>
@@ -465,7 +465,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time is 7.1× the SLA limit (10.578s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}.</div>
+      <div class="diag-desc">P99 queue time is 7.0× the SLA limit (10.570s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}.</div>
     </div>
     
     
@@ -513,7 +513,7 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=2935, avg=160.6). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=2935, avg=155.6). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
     <div class="diag-card critical">
@@ -619,7 +619,7 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Sustained Error Rate</div>
-      <div class="diag-desc">Errors are relatively steady (peak=423, avg=167.4). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+      <div class="diag-desc">Errors are relatively steady (peak=423, avg=192.7). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
     </div>
     
     <div class="diag-card critical">
@@ -658,9 +658,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">92.9167%</td>
+          <td class="actual">92.7778%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-6.9833%</td>
+          <td class="delta">-7.1222%</td>
         </tr>
         
       </tbody>
@@ -672,12 +672,12 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Sustained Error Rate</div>
-      <div class="diag-desc">Errors are relatively steady (peak=684, avg=252.0). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+      <div class="diag-desc">Errors are relatively steady (peak=684, avg=231.6). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 6.98% below SLA (92.92% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 7.12% below SLA (92.78% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -778,7 +778,7 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=135, avg=5.5). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=135, avg=5.6). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
     <div class="diag-card critical">
