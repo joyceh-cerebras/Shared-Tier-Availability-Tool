@@ -185,7 +185,7 @@
 
 <h1>🚨 Availability &amp; Queue Time SLA Dashboard</h1>
 <p class="subtitle">
-  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-21 14:25 UTC
+  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-21 15:23 UTC
   &nbsp;|&nbsp; Models scanned: 27
 </p>
 
@@ -200,13 +200,13 @@
   <div class="summary-card">
     <div class="label">Total Violations</div>
     <div class="value bad">
-      16
+      15
     </div>
   </div>
   <div class="summary-card">
     <div class="label">Critical Diagnoses</div>
     <div class="value bad">
-      14
+      12
     </div>
   </div>
   <div class="summary-card">
@@ -218,83 +218,6 @@
 
 
 <div class="model-panel" id="panel-1">
-  <div class="model-header" onclick="this.parentElement.classList.toggle('open')">
-    <div>
-      <span class="model-name">qwen-3-235b-a22b-instruct-2507</span>
-      
-      
-        <span class="badge critical">CRITICAL</span>
-      
-      <span class="violation-count">&nbsp;3 violations</span>
-    </div>
-    <span class="chevron">▼</span>
-  </div>
-  <div class="model-body">
-    <!-- Violations table -->
-    <table>
-      <thead>
-        <tr>
-          <th>Metric</th>
-          <th>Actual</th>
-          <th>SLA Requirement</th>
-          <th>Delta</th>
-        </tr>
-      </thead>
-      <tbody>
-        
-        <tr>
-          <td>Availability</td>
-          <td class="actual">95.2083%</td>
-          <td class="expected">≥ 99.9%</td>
-          <td class="delta">-4.6917%</td>
-        </tr>
-        
-        <tr>
-          <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">3.8176 s</td>
-          <td class="expected">< 1.5 s</td>
-          <td class="delta">+2.3176 s</td>
-        </tr>
-        
-        <tr>
-          <td>P99 Queue Time (Tier 3)</td>
-          <td class="actual">2.9975 s</td>
-          <td class="expected">< 2.0 s</td>
-          <td class="delta">+0.9975 s</td>
-        </tr>
-        
-      </tbody>
-    </table>
-
-    <!-- Diagnosis -->
-    
-    <div class="diag-section-title">Possible Diagnosis / Root Causes</div>
-    
-    <div class="diag-card high">
-      <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=1118, avg=136.9). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
-    </div>
-    
-    <div class="diag-card critical">
-      <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 4.69% below SLA (95.21% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
-    </div>
-    
-    <div class="diag-card critical">
-      <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time exceeds SLA by 2.318s (3.818s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
-    </div>
-    
-    <div class="diag-card medium">
-      <div class="diag-title">P99 Queue Time – Priority Tier 3</div>
-      <div class="diag-desc">P99 queue time is slightly over SLA by 0.997s (2.997s vs 2.0s). Monitor closely — may be caused by occasional traffic micro‑bursts or warm‑up effects. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
-    </div>
-    
-    
-  </div>
-</div>
-
-<div class="model-panel" id="panel-2">
   <div class="model-header" onclick="this.parentElement.classList.toggle('open')">
     <div>
       <span class="model-name">alphasense-gpt-oss-120b</span>
@@ -321,9 +244,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">97.5000%</td>
+          <td class="actual">99.5833%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-2.4000%</td>
+          <td class="delta">-0.3167%</td>
         </tr>
         
         <tr>
@@ -340,14 +263,14 @@
     
     <div class="diag-section-title">Possible Diagnosis / Root Causes</div>
     
-    <div class="diag-card high">
-      <div class="diag-title">Availability – Sustained Error Rate</div>
-      <div class="diag-desc">Errors are relatively steady (peak=8853, avg=1943.3). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+    <div class="diag-card medium">
+      <div class="diag-title">Availability – Bursty Errors</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=3134, avg=349.8). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
-    <div class="diag-card critical">
-      <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 2.40% below SLA (97.50% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+    <div class="diag-card medium">
+      <div class="diag-title">Availability – Below SLA</div>
+      <div class="diag-desc">Availability is 0.317% below SLA (99.583% vs 99.9%). Check for intermittent 5xx errors or short-lived node issues.</div>
     </div>
     
     <div class="diag-card critical">
@@ -359,7 +282,7 @@
   </div>
 </div>
 
-<div class="model-panel" id="panel-3">
+<div class="model-panel" id="panel-2">
   <div class="model-header" onclick="this.parentElement.classList.toggle('open')">
     <div>
       <span class="model-name">mistral-deepresearch-250708</span>
@@ -386,16 +309,16 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">98.8889%</td>
+          <td class="actual">98.7500%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-1.0111%</td>
+          <td class="delta">-1.1500%</td>
         </tr>
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">3.7432 s</td>
+          <td class="actual">2.1512 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+2.2432 s</td>
+          <td class="delta">+0.6512 s</td>
         </tr>
         
       </tbody>
@@ -407,17 +330,82 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=36, avg=3.6). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=36, avg=3.9). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 1.01% below SLA (98.89% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 1.15% below SLA (98.75% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+    </div>
+    
+    <div class="diag-card medium">
+      <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
+      <div class="diag-desc">P99 queue time is slightly over SLA by 0.651s (2.151s vs 1.5s). Monitor closely — may be caused by occasional traffic micro‑bursts or warm‑up effects. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="model-panel" id="panel-3">
+  <div class="model-header" onclick="this.parentElement.classList.toggle('open')">
+    <div>
+      <span class="model-name">qwen-3-235b-a22b-instruct-2507</span>
+      
+      
+        <span class="badge critical">CRITICAL</span>
+      
+      <span class="violation-count">&nbsp;2 violations</span>
+    </div>
+    <span class="chevron">▼</span>
+  </div>
+  <div class="model-body">
+    <!-- Violations table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Actual</th>
+          <th>SLA Requirement</th>
+          <th>Delta</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>Availability</td>
+          <td class="actual">96.8750%</td>
+          <td class="expected">≥ 99.9%</td>
+          <td class="delta">-3.0250%</td>
+        </tr>
+        
+        <tr>
+          <td>P99 Queue Time (Tier 2)</td>
+          <td class="actual">3.2774 s</td>
+          <td class="expected">< 1.5 s</td>
+          <td class="delta">+1.7774 s</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <!-- Diagnosis -->
+    
+    <div class="diag-section-title">Possible Diagnosis / Root Causes</div>
+    
+    <div class="diag-card high">
+      <div class="diag-title">Availability – Sustained Error Rate</div>
+      <div class="diag-desc">Errors are relatively steady (peak=408, avg=87.7). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+    </div>
+    
+    <div class="diag-card critical">
+      <div class="diag-title">Availability – Major Gap</div>
+      <div class="diag-desc">Availability is 3.03% below SLA (96.88% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time exceeds SLA by 2.243s (3.743s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
+      <div class="diag-desc">P99 queue time exceeds SLA by 1.777s (3.277s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
     </div>
     
     
@@ -451,9 +439,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">4.0441 s</td>
+          <td class="actual">4.0861 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+2.5441 s</td>
+          <td class="delta">+2.5861 s</td>
         </tr>
         
       </tbody>
@@ -465,7 +453,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time exceeds SLA by 2.544s (4.044s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue.</div>
+      <div class="diag-desc">P99 queue time exceeds SLA by 2.586s (4.086s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue.</div>
     </div>
     
     
@@ -764,9 +752,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">92.1528%</td>
+          <td class="actual">91.8056%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-7.7472%</td>
+          <td class="delta">-8.0944%</td>
         </tr>
         
       </tbody>
@@ -778,12 +766,12 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Sustained Error Rate</div>
-      <div class="diag-desc">Errors are relatively steady (peak=11, avg=2.3). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+      <div class="diag-desc">Errors are relatively steady (peak=11, avg=2.2). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 7.75% below SLA (92.15% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 8.09% below SLA (91.81% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -817,9 +805,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">3.6008 s</td>
+          <td class="actual">3.4101 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+2.1008 s</td>
+          <td class="delta">+1.9101 s</td>
         </tr>
         
       </tbody>
@@ -831,7 +819,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time exceeds SLA by 2.101s (3.601s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue.</div>
+      <div class="diag-desc">P99 queue time exceeds SLA by 1.910s (3.410s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue.</div>
     </div>
     
     
