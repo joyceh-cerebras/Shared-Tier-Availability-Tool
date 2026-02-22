@@ -185,7 +185,7 @@
 
 <h1>🚨 Availability &amp; Queue Time SLA Dashboard</h1>
 <p class="subtitle">
-  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-22 07:35 UTC
+  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-22 08:30 UTC
   &nbsp;|&nbsp; Models scanned: 27
 </p>
 
@@ -244,9 +244,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">97.9167%</td>
+          <td class="actual">97.7778%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-1.9833%</td>
+          <td class="delta">-2.1222%</td>
         </tr>
         
         <tr>
@@ -270,7 +270,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 1.98% below SLA (97.92% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 2.12% below SLA (97.78% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     <div class="diag-card medium">
@@ -309,9 +309,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">96.0417%</td>
+          <td class="actual">96.1111%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-3.8583%</td>
+          <td class="delta">-3.7889%</td>
         </tr>
         
       </tbody>
@@ -323,12 +323,12 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Sustained Error Rate</div>
-      <div class="diag-desc">Errors are relatively steady (peak=8, avg=2.7). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+      <div class="diag-desc">Errors are relatively steady (peak=8, avg=2.8). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 3.86% below SLA (96.04% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 3.79% below SLA (96.11% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -362,9 +362,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">92.5694%</td>
+          <td class="actual">92.4306%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-7.3306%</td>
+          <td class="delta">-7.4694%</td>
         </tr>
         
       </tbody>
@@ -376,12 +376,12 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Sustained Error Rate</div>
-      <div class="diag-desc">Errors are relatively steady (peak=5, avg=1.9). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+      <div class="diag-desc">Errors are relatively steady (peak=5, avg=2.0). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 7.33% below SLA (92.57% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 7.47% below SLA (92.43% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -535,7 +535,7 @@
     
     <div class="diag-card medium">
       <div class="diag-title">Availability – Traffic Spike</div>
-      <div class="diag-desc">Traffic peaked at 2936 reqs/10min vs avg 718. A sudden spike may overwhelm capacity, causing 5xx errors and downtime minutes.</div>
+      <div class="diag-desc">Traffic peaked at 2936 reqs/10min vs avg 729. A sudden spike may overwhelm capacity, causing 5xx errors and downtime minutes.</div>
     </div>
     
     <div class="diag-card medium">
@@ -588,7 +588,7 @@
     
     <div class="diag-card medium">
       <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=1072, avg=66.1). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=1072, avg=63.3). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
     <div class="diag-card medium">
@@ -695,6 +695,11 @@
     <div class="diag-card medium">
       <div class="diag-title">Availability – Sustained Error Rate</div>
       <div class="diag-desc">Errors are relatively steady (peak=28, avg=8.4). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+    </div>
+    
+    <div class="diag-card medium">
+      <div class="diag-title">Availability – Traffic Spike</div>
+      <div class="diag-desc">Traffic peaked at 370 reqs/10min vs avg 123. A sudden spike may overwhelm capacity, causing 5xx errors and downtime minutes.</div>
     </div>
     
     <div class="diag-card medium">
