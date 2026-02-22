@@ -185,7 +185,7 @@
 
 <h1>🚨 Availability &amp; Queue Time SLA Dashboard</h1>
 <p class="subtitle">
-  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-22 14:24 UTC
+  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-22 15:23 UTC
   &nbsp;|&nbsp; Models scanned: 27
 </p>
 
@@ -244,16 +244,16 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">97.4306%</td>
+          <td class="actual">97.5000%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-2.4694%</td>
+          <td class="delta">-2.4000%</td>
         </tr>
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">2.2164 s</td>
+          <td class="actual">2.0857 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+0.7164 s</td>
+          <td class="delta">+0.5857 s</td>
         </tr>
         
       </tbody>
@@ -270,12 +270,12 @@
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 2.47% below SLA (97.43% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 2.40% below SLA (97.50% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     <div class="diag-card medium">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time is slightly over SLA by 0.716s (2.216s vs 1.5s). Monitor closely — may be caused by occasional traffic micro‑bursts or warm‑up effects. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
+      <div class="diag-desc">P99 queue time is slightly over SLA by 0.586s (2.086s vs 1.5s). Monitor closely — may be caused by occasional traffic micro‑bursts or warm‑up effects. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
     </div>
     
     
@@ -309,9 +309,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">95.3472%</td>
+          <td class="actual">95.1389%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-4.5528%</td>
+          <td class="delta">-4.7611%</td>
         </tr>
         
       </tbody>
@@ -328,7 +328,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 4.55% below SLA (95.35% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 4.76% below SLA (95.14% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -362,9 +362,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">93.1250%</td>
+          <td class="actual">93.3333%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-6.7750%</td>
+          <td class="delta">-6.5667%</td>
         </tr>
         
       </tbody>
@@ -376,12 +376,12 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Sustained Error Rate</div>
-      <div class="diag-desc">Errors are relatively steady (peak=5, avg=2.0). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+      <div class="diag-desc">Errors are relatively steady (peak=6, avg=2.1). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 6.78% below SLA (93.12% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 6.57% below SLA (93.33% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
