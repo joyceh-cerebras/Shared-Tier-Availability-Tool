@@ -185,7 +185,7 @@
 
 <h1>🚨 Availability &amp; Queue Time SLA Dashboard</h1>
 <p class="subtitle">
-  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-23 16:55 UTC
+  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-23 18:00 UTC
   &nbsp;|&nbsp; Models scanned: 27
 </p>
 
@@ -244,9 +244,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">98.0556%</td>
+          <td class="actual">97.9861%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-1.8444%</td>
+          <td class="delta">-1.9139%</td>
         </tr>
         
         <tr>
@@ -265,12 +265,12 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=45, avg=6.0). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=45, avg=6.2). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 1.84% below SLA (98.06% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 1.91% below SLA (97.99% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     <div class="diag-card critical">
@@ -309,9 +309,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">11.84 s</td>
+          <td class="actual">11.75 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+10.3388 s</td>
+          <td class="delta">+10.2532 s</td>
         </tr>
         
       </tbody>
@@ -323,7 +323,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time is 7.9× the SLA limit (11.839s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}.</div>
+      <div class="diag-desc">P99 queue time is 7.8× the SLA limit (11.753s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}.</div>
     </div>
     
     
@@ -357,9 +357,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">97.0139%</td>
+          <td class="actual">97.1528%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-2.8861%</td>
+          <td class="delta">-2.7472%</td>
         </tr>
         
       </tbody>
@@ -376,12 +376,12 @@
     
     <div class="diag-card medium">
       <div class="diag-title">Availability – Traffic Spike</div>
-      <div class="diag-desc">Traffic peaked at 107 reqs/10min vs avg 31. A sudden spike may overwhelm capacity, causing 5xx errors and downtime minutes.</div>
+      <div class="diag-desc">Traffic peaked at 107 reqs/10min vs avg 30. A sudden spike may overwhelm capacity, causing 5xx errors and downtime minutes.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 2.89% below SLA (97.01% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 2.75% below SLA (97.15% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -415,9 +415,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">93.6806%</td>
+          <td class="actual">93.8194%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-6.2194%</td>
+          <td class="delta">-6.0806%</td>
         </tr>
         
       </tbody>
@@ -434,7 +434,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 6.22% below SLA (93.68% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 6.08% below SLA (93.82% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -583,7 +583,7 @@
     
     <div class="diag-card medium">
       <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=216, avg=27.9). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=216, avg=25.9). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
     <div class="diag-card medium">
