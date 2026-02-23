@@ -185,7 +185,7 @@
 
 <h1>🚨 Availability &amp; Queue Time SLA Dashboard</h1>
 <p class="subtitle">
-  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-23 01:59 UTC
+  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-23 04:31 UTC
   &nbsp;|&nbsp; Models scanned: 27
 </p>
 
@@ -244,16 +244,16 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">97.7083%</td>
+          <td class="actual">97.8472%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-2.1917%</td>
+          <td class="delta">-2.0528%</td>
         </tr>
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">2.3134 s</td>
+          <td class="actual">2.3137 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+0.8134 s</td>
+          <td class="delta">+0.8137 s</td>
         </tr>
         
       </tbody>
@@ -265,17 +265,17 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=36, avg=5.3). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=36, avg=5.5). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 2.19% below SLA (97.71% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 2.05% below SLA (97.85% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     <div class="diag-card high">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time exceeds SLA by 0.813s (2.313s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
+      <div class="diag-desc">P99 queue time exceeds SLA by 0.814s (2.314s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
     </div>
     
     
@@ -309,9 +309,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">95.9028%</td>
+          <td class="actual">96.1111%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-3.9972%</td>
+          <td class="delta">-3.7889%</td>
         </tr>
         
       </tbody>
@@ -328,12 +328,12 @@
     
     <div class="diag-card medium">
       <div class="diag-title">Availability – Traffic Spike</div>
-      <div class="diag-desc">Traffic peaked at 99 reqs/10min vs avg 30. A sudden spike may overwhelm capacity, causing 5xx errors and downtime minutes.</div>
+      <div class="diag-desc">Traffic peaked at 107 reqs/10min vs avg 32. A sudden spike may overwhelm capacity, causing 5xx errors and downtime minutes.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 4.00% below SLA (95.90% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 3.79% below SLA (96.11% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -367,9 +367,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">94.1667%</td>
+          <td class="actual">94.5833%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-5.7333%</td>
+          <td class="delta">-5.3167%</td>
         </tr>
         
       </tbody>
@@ -386,7 +386,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 5.73% below SLA (94.17% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 5.32% below SLA (94.58% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -468,9 +468,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">1.5674 s</td>
+          <td class="actual">1.8448 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+0.0674 s</td>
+          <td class="delta">+0.3448 s</td>
         </tr>
         
       </tbody>
@@ -482,7 +482,7 @@
     
     <div class="diag-card medium">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time is slightly over SLA by 0.067s (1.567s vs 1.5s). Monitor closely — may be caused by occasional traffic micro‑bursts or warm‑up effects.</div>
+      <div class="diag-desc">P99 queue time is slightly over SLA by 0.345s (1.845s vs 1.5s). Monitor closely — may be caused by occasional traffic micro‑bursts or warm‑up effects.</div>
     </div>
     
     
@@ -516,9 +516,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 1)</td>
-          <td class="actual">0.5181 s</td>
+          <td class="actual">0.5138 s</td>
           <td class="expected">< 0.5 s</td>
-          <td class="delta">+0.0181 s</td>
+          <td class="delta">+0.0138 s</td>
         </tr>
         
       </tbody>
@@ -530,7 +530,7 @@
     
     <div class="diag-card medium">
       <div class="diag-title">P99 Queue Time – Priority Tier 1</div>
-      <div class="diag-desc">P99 queue time is slightly over SLA by 0.018s (0.518s vs 0.5s). Monitor closely — may be caused by occasional traffic micro‑bursts or warm‑up effects.</div>
+      <div class="diag-desc">P99 queue time is slightly over SLA by 0.014s (0.514s vs 0.5s). Monitor closely — may be caused by occasional traffic micro‑bursts or warm‑up effects.</div>
     </div>
     
     
