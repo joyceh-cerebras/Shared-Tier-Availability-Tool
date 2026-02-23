@@ -185,7 +185,7 @@
 
 <h1>🚨 Availability &amp; Queue Time SLA Dashboard</h1>
 <p class="subtitle">
-  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-23 04:31 UTC
+  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-23 06:05 UTC
   &nbsp;|&nbsp; Models scanned: 27
 </p>
 
@@ -244,16 +244,16 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">97.8472%</td>
+          <td class="actual">97.9167%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-2.0528%</td>
+          <td class="delta">-1.9833%</td>
         </tr>
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">2.3137 s</td>
+          <td class="actual">2.3136 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+0.8137 s</td>
+          <td class="delta">+0.8136 s</td>
         </tr>
         
       </tbody>
@@ -265,12 +265,12 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=36, avg=5.5). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=36, avg=5.4). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 2.05% below SLA (97.85% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 1.98% below SLA (97.92% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     <div class="diag-card high">
@@ -323,7 +323,7 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Sustained Error Rate</div>
-      <div class="diag-desc">Errors are relatively steady (peak=6, avg=2.9). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+      <div class="diag-desc">Errors are relatively steady (peak=6, avg=2.8). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
     </div>
     
     <div class="diag-card medium">
@@ -367,9 +367,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">94.5833%</td>
+          <td class="actual">94.6528%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-5.3167%</td>
+          <td class="delta">-5.2472%</td>
         </tr>
         
       </tbody>
@@ -386,7 +386,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 5.32% below SLA (94.58% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 5.25% below SLA (94.65% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -516,9 +516,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 1)</td>
-          <td class="actual">0.5138 s</td>
+          <td class="actual">0.5181 s</td>
           <td class="expected">< 0.5 s</td>
-          <td class="delta">+0.0138 s</td>
+          <td class="delta">+0.0181 s</td>
         </tr>
         
       </tbody>
@@ -530,7 +530,7 @@
     
     <div class="diag-card medium">
       <div class="diag-title">P99 Queue Time – Priority Tier 1</div>
-      <div class="diag-desc">P99 queue time is slightly over SLA by 0.014s (0.514s vs 0.5s). Monitor closely — may be caused by occasional traffic micro‑bursts or warm‑up effects.</div>
+      <div class="diag-desc">P99 queue time is slightly over SLA by 0.018s (0.518s vs 0.5s). Monitor closely — may be caused by occasional traffic micro‑bursts or warm‑up effects.</div>
     </div>
     
     
