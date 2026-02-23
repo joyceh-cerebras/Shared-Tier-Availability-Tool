@@ -185,7 +185,7 @@
 
 <h1>🚨 Availability &amp; Queue Time SLA Dashboard</h1>
 <p class="subtitle">
-  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-23 14:11 UTC
+  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-23 15:43 UTC
   &nbsp;|&nbsp; Models scanned: 27
 </p>
 
@@ -244,16 +244,16 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">97.9861%</td>
+          <td class="actual">98.1250%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-1.9139%</td>
+          <td class="delta">-1.7750%</td>
         </tr>
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">6.0091 s</td>
+          <td class="actual">6.1371 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+4.5091 s</td>
+          <td class="delta">+4.6371 s</td>
         </tr>
         
       </tbody>
@@ -265,17 +265,17 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Bursty Errors</div>
-      <div class="diag-desc">Errors are highly concentrated (peak=45, avg=6.2). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
+      <div class="diag-desc">Errors are highly concentrated (peak=45, avg=5.7). This pattern suggests a transient incident (deployment, node failure, upstream outage) rather than a chronic issue.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 1.91% below SLA (97.99% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 1.78% below SLA (98.12% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time is 4.0× the SLA limit (6.009s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
+      <div class="diag-desc">P99 queue time is 4.1× the SLA limit (6.137s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
     </div>
     
     
@@ -309,9 +309,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">9.9792 s</td>
+          <td class="actual">11.90 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+8.4792 s</td>
+          <td class="delta">+10.3959 s</td>
         </tr>
         
       </tbody>
@@ -323,7 +323,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time is 6.7× the SLA limit (9.979s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}.</div>
+      <div class="diag-desc">P99 queue time is 7.9× the SLA limit (11.896s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}.</div>
     </div>
     
     
@@ -357,9 +357,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">96.5278%</td>
+          <td class="actual">97.0139%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-3.3722%</td>
+          <td class="delta">-2.8861%</td>
         </tr>
         
       </tbody>
@@ -376,12 +376,12 @@
     
     <div class="diag-card medium">
       <div class="diag-title">Availability – Traffic Spike</div>
-      <div class="diag-desc">Traffic peaked at 107 reqs/10min vs avg 30. A sudden spike may overwhelm capacity, causing 5xx errors and downtime minutes.</div>
+      <div class="diag-desc">Traffic peaked at 107 reqs/10min vs avg 31. A sudden spike may overwhelm capacity, causing 5xx errors and downtime minutes.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 3.37% below SLA (96.53% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 2.89% below SLA (97.01% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -415,9 +415,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">94.2361%</td>
+          <td class="actual">94.1667%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-5.6639%</td>
+          <td class="delta">-5.7333%</td>
         </tr>
         
       </tbody>
@@ -429,12 +429,12 @@
     
     <div class="diag-card high">
       <div class="diag-title">Availability – Sustained Error Rate</div>
-      <div class="diag-desc">Errors are relatively steady (peak=8, avg=2.6). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+      <div class="diag-desc">Errors are relatively steady (peak=8, avg=2.7). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
     </div>
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 5.66% below SLA (94.24% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 5.73% below SLA (94.17% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -468,9 +468,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">5.6646 s</td>
+          <td class="actual">5.7447 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+4.1646 s</td>
+          <td class="delta">+4.2447 s</td>
         </tr>
         
       </tbody>
@@ -482,7 +482,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time is 3.8× the SLA limit (5.665s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}.</div>
+      <div class="diag-desc">P99 queue time is 3.8× the SLA limit (5.745s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}.</div>
     </div>
     
     
@@ -583,7 +583,7 @@
     
     <div class="diag-card medium">
       <div class="diag-title">Availability – Sustained Error Rate</div>
-      <div class="diag-desc">Errors are relatively steady (peak=85, avg=21.5). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
+      <div class="diag-desc">Errors are relatively steady (peak=85, avg=18.5). This may indicate a persistent configuration issue, resource constraint, or a bug in the model serving path.</div>
     </div>
     
     <div class="diag-card medium">
