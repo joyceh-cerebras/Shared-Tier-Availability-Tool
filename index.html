@@ -185,7 +185,7 @@
 
 <h1>🚨 Availability &amp; Queue Time SLA Dashboard</h1>
 <p class="subtitle">
-  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-23 07:53 UTC
+  Window: last 24h &nbsp;|&nbsp; Generated: 2026-02-23 08:48 UTC
   &nbsp;|&nbsp; Models scanned: 27
 </p>
 
@@ -251,9 +251,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">3.6875 s</td>
+          <td class="actual">4.7205 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+2.1875 s</td>
+          <td class="delta">+3.2205 s</td>
         </tr>
         
       </tbody>
@@ -275,7 +275,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time exceeds SLA by 2.187s (3.687s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
+      <div class="diag-desc">P99 queue time is 3.1× the SLA limit (4.720s vs 1.5s). This suggests severe resource starvation or scheduling delays — investigate cluster GPU utilization, pending request queue depth, and whether lower‑priority traffic is crowding out tier {tier}. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
     </div>
     
     
@@ -309,16 +309,16 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">97.9861%</td>
+          <td class="actual">98.1944%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-1.9139%</td>
+          <td class="delta">-1.7056%</td>
         </tr>
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">2.3136 s</td>
+          <td class="actual">2.3656 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+0.8136 s</td>
+          <td class="delta">+0.8656 s</td>
         </tr>
         
       </tbody>
@@ -335,12 +335,12 @@
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 1.91% below SLA (97.99% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 1.71% below SLA (98.19% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     <div class="diag-card high">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time exceeds SLA by 0.814s (2.314s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
+      <div class="diag-desc">P99 queue time exceeds SLA by 0.866s (2.366s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue. Note: this model also has availability violations, which may share the same root cause (e.g., overloaded cluster, failing nodes).</div>
     </div>
     
     
@@ -374,9 +374,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">96.0417%</td>
+          <td class="actual">95.8333%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-3.8583%</td>
+          <td class="delta">-4.0667%</td>
         </tr>
         
       </tbody>
@@ -398,7 +398,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 3.86% below SLA (96.04% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 4.07% below SLA (95.83% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -432,9 +432,9 @@
         
         <tr>
           <td>Availability</td>
-          <td class="actual">94.1667%</td>
+          <td class="actual">94.3750%</td>
           <td class="expected">≥ 99.9%</td>
-          <td class="delta">-5.7333%</td>
+          <td class="delta">-5.5250%</td>
         </tr>
         
       </tbody>
@@ -451,7 +451,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">Availability – Major Gap</div>
-      <div class="diag-desc">Availability is 5.73% below SLA (94.17% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
+      <div class="diag-desc">Availability is 5.53% below SLA (94.38% vs 99.9%). Recommend reviewing incident reports, recent deployments, and cluster health.</div>
     </div>
     
     
@@ -485,9 +485,9 @@
         
         <tr>
           <td>P99 Queue Time (Tier 2)</td>
-          <td class="actual">4.0376 s</td>
+          <td class="actual">3.8224 s</td>
           <td class="expected">< 1.5 s</td>
-          <td class="delta">+2.5376 s</td>
+          <td class="delta">+2.3224 s</td>
         </tr>
         
       </tbody>
@@ -499,7 +499,7 @@
     
     <div class="diag-card critical">
       <div class="diag-title">P99 Queue Time – Priority Tier 2</div>
-      <div class="diag-desc">P99 queue time exceeds SLA by 2.538s (4.038s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue.</div>
+      <div class="diag-desc">P99 queue time exceeds SLA by 2.322s (3.822s vs 1.5s). Possible causes: capacity is borderline for current request volume, batch scheduling is sub‑optimal, or a few long‑running requests are blocking the queue.</div>
     </div>
     
     
